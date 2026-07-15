@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="GGH.API/GGH.API.csproj" />
+  <Project Path="GGH.Application.Tests/GGH.Application.Tests.csproj" />
+  <Project Path="GGH.Application/GGH.Application.csproj" />
+  <Project Path="GGH.Domain.Tests/GGH.Domain.Tests.csproj" />
+  <Project Path="GGH.Domain/GGH.Domain.csproj" />
+  <Project Path="GGH.Infrastructure.Tests/GGH.Infrastructure.Tests.csproj" />
+  <Project Path="GGH.Infrastructure/GGH.Infrastructure.csproj" />
+</Solution>

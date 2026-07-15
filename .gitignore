@@ -1,0 +1,29 @@
+# =========================================================
+# .gitignore — Backend (.NET)
+# =========================================================
+
+**/bin/
+**/obj/
+**/.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs de Serilog
+**/logs/
+
+# Perfiles de despliegue con datos sensibles
+**/PublishProfiles/
+
+# Configuración local con secretos reales — NUNCA subir esto
+**/appsettings.Development.json
+**/appsettings.Local.json
+.env
+
+# Sistema operativo / editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
