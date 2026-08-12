@@ -35,9 +35,6 @@ GGH.API              → Controllers, middleware de manejo de errores, configura
 ### Con Docker
 
 ```bash
-cp .env.example .env
-# Edita .env con tus valores
-
 docker compose up --build
 ```
 API disponible en `http://localhost:7010`, Swagger en `http://localhost:7010/swagger`.
@@ -47,8 +44,8 @@ API disponible en `http://localhost:7010`, Swagger en `http://localhost:7010/swa
 **Requisitos:** .NET 10 SDK, PostgreSQL 16+.
 
 1. Crea una base de datos en PostgreSQL
-2. Ejecuta los scripts de `Database/Scripts/` **en orden** (00 al 08)
-3. Configura `GGH.API/appsettings.Development.json` con tu connection string, llave JWT y llave de cifrado
+2. Ejecutar los scripts de `Database/Scripts/` **en orden** (00 al 08)
+3. Configura `GGH.API/appsettings.Development.json` con la conexion string, llave JWT y llave de cifrado
 4. Desde `GGH.API/`:
    ```bash
    dotnet run
