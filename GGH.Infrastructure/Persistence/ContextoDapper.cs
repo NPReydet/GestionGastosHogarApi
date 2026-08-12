@@ -9,20 +9,6 @@ using System.Data;
 
 namespace GGH.Infrastructure.Persistence
 {
-    /// <summary>
-    /// Único punto de acceso a PostgreSQL vía Dapper. Todos los repositorios
-    /// pasan por aquí, así la política de reintentos (Polly) y el manejo de
-    /// errores de conexión quedan centralizados en un solo lugar.
-    ///
-    /// IMPORTANTE: no usamos CommandType.StoredProcedure. Desde Npgsql 6+, ese
-    /// CommandType genera un statement CALL, que en PostgreSQL solo es válido
-    /// para objetos creados con CREATE PROCEDURE. Nuestros sp_* son CREATE
-    /// FUNCTION (los necesitamos como funciones porque retornan tablas/valores,
-    /// algo que CALL no soporta), así que construimos manualmente un
-    /// "SELECT * FROM funcion(parametro => @parametro, ...)" con CommandType.Text,
-    /// que es la forma correcta de invocar funciones (no procedimientos) desde
-    /// un cliente .NET.
-    /// </summary>
     public class ContextoDapper : IContextoDapper
     {
         private readonly string _connectionString;

@@ -14,12 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GGH.API.Controllers
 {
-    /// <summary>
-    /// Todos los endpoints requieren autenticación y siempre operan sobre el
-    /// usuario autenticado actual (vía IUsuarioActual) — nunca reciben un
-    /// usuarioId/grupoId por parámetro, para que un usuario no pueda
-    /// consultar o manipular el grupo de otro.
-    /// </summary>
+   
     [ApiController]
     [Authorize]
     [Route("api/grupos-familiares")]

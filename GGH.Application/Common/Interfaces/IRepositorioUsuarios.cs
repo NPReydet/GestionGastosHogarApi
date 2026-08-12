@@ -18,10 +18,6 @@ namespace GGH.Application.Common.Interfaces
             DateOnly fechaNacimiento,
             string direccion);
 
-        /// <summary>
-        /// Derecho al olvido: borrado físico total del usuario y sus datos
-        /// (gastos, ingresos, datos sensibles). Ejecuta sp_eliminar_usuario_completo.
-        /// </summary>
         Task EliminarCuentaAsync(Guid usuarioId);
     }
 }

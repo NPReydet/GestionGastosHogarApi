@@ -1,10 +1,6 @@
 ﻿
 namespace GGH.Domain.Exceptions
 {
-    /// <summary>
-    /// Se lanza cuando, tras agotar los reintentos de conexión (Polly),
-    /// la base de datos sigue sin responder.
-    /// </summary>
     public class ErrorComunicacionBaseDatosException : Exception
     {
         public ErrorComunicacionBaseDatosException()

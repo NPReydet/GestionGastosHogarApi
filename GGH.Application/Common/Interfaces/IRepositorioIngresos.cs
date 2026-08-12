@@ -13,8 +13,6 @@ namespace GGH.Application.Common.Interfaces
 
         Task<IEnumerable<IngresoDto>> ListarAsync(Guid usuarioId, DateOnly? desde, DateOnly? hasta);
         Task<IngresoDto?> ObtenerPorIdAsync(Guid ingresoId, Guid usuarioId);
-
-        // Reutiliza el mismo CategoriaDto que Gastos, ya que la tabla `categorias` está unificada.
         Task<IEnumerable<CategoriaDto>> ListarCategoriasAsync();
     }
 }

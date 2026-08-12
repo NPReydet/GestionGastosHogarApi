@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using GGH.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Http;
 

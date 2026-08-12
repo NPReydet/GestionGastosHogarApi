@@ -2,12 +2,6 @@
 
 namespace GGH.Domain.ValueObjects
 {
-    /// <summary>
-    /// Representa un RUT chileno inmutable, ya validado.
-    /// La validación del dígito verificador se hace en la base de datos
-    /// (fn_validar_rut) al momento de registrar; este VO solo garantiza
-    /// el formato correcto en memoria.
-    /// </summary>
     public sealed class Rut
     {
         public long Numero { get; }

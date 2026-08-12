@@ -1,9 +1,6 @@
 ﻿using GGH.Application.Common.Interfaces;
 using GGH.Application.Features.Resumenes.Dtos;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GGH.Application.Features.Resumenes.Queries.ObtenerTopCategoriasIngreso
 {

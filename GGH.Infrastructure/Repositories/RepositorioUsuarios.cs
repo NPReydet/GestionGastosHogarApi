@@ -55,9 +55,6 @@ namespace GGH.Infrastructure.Repositories
                         p_email = email,
                         p_password_hash = passwordHash,
                         p_auth0_id = (string?)null,
-                        // Se envía como texto ISO 'yyyy-MM-dd' y se castea a DATE
-                        // dentro de la función SQL — evita el problema de Npgsql
-                        // enviando DateOnly/DateTime con un tipo distinto al esperado.
                         p_fecha_nacimiento = fechaNacimiento.ToString("yyyy-MM-dd"),
                         p_direccion = direccion,
                         p_llave_cifrado = _servicioCifrado.ObtenerLlaveCifrado()

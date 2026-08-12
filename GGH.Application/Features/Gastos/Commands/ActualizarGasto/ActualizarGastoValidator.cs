@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using MediatR;
 
 namespace GGH.Application.Features.Gastos.Commands.ActualizarGasto
 {

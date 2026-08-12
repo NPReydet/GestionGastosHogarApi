@@ -147,8 +147,6 @@ namespace GGH.Infrastructure.Repositories
                     new
                     {
                         p_grupo_familiar_id = grupoFamiliarId,
-                        // Fechas como texto ISO 'yyyy-MM-dd', casteadas a DATE dentro
-                        // de la función SQL — misma convención usada en el registro.
                         p_inicio_1 = inicio1.ToString("yyyy-MM-dd"),
                         p_fin_1 = fin1.ToString("yyyy-MM-dd"),
                         p_inicio_2 = inicio2.ToString("yyyy-MM-dd"),

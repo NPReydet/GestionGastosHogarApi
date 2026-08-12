@@ -27,7 +27,6 @@ namespace GGH.Infrastructure.Repositories
                         p_usuario_id = usuarioId,
                         p_categoria_id = categoriaId,
                         p_monto = monto,
-                        // Fecha como texto ISO 'yyyy-MM-dd', casteada a DATE dentro de la función SQL.
                         p_fecha = fecha.ToString("yyyy-MM-dd"),
                         p_descripcion = descripcion,
                         p_medio_pago = medioPago,

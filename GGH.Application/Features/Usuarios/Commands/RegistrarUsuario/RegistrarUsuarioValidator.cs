@@ -1,8 +1,5 @@
 ﻿using FluentValidation;
 using GGH.Application.Common.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GGH.Application.Features.Usuarios.Commands.RegistrarUsuario
 {

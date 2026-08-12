@@ -5,12 +5,6 @@ using GGH.Domain.Exceptions;
 
 namespace GGH.API.Middleware
 {
-    /// <summary>
-    /// Único punto donde se capturan TODAS las excepciones no manejadas.
-    /// Esto es lo que evita que, en Debug, una excepción de conexión a la
-    /// base de datos (u otro error) tumbe la aplicación: el pipeline de
-    /// ASP.NET Core siempre llega hasta aquí antes de romper el proceso.
-    /// </summary>
     public class MiddlewareManejoExcepciones
     {
         private readonly RequestDelegate _siguiente;
@@ -59,10 +53,6 @@ namespace GGH.API.Middleware
                 ValidationException validacion => (HttpStatusCode.BadRequest, string.Join(" | ", validacion.Errors.Select(e => e.ErrorMessage))),
                 _ => (HttpStatusCode.InternalServerError, "Ocurrió un error inesperado. Por favor, intenta más tarde.")
             };
-
-            // Los errores 5xx (incluyendo problemas de BD) se registran como Error;
-            // los 4xx (credenciales, validación) se registran como Warning, ya que
-            // son parte del flujo normal de uso, no fallas del sistema.
             if ((int)codigoEstado >= 500)
             {
                 _logger.LogError(ex, "Error no controlado: {Mensaje}", ex.Message);

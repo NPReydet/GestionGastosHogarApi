@@ -17,12 +17,7 @@ namespace GGH.API.Controllers
             _mediator = mediator;
         }
 
-        /// <summary>
-        /// Derecho al olvido: elimina por completo la cuenta del usuario
-        /// autenticado (datos personales, gastos, ingresos). No lleva {id}
-        /// en la ruta — siempre opera sobre el usuario del JWT, para que
-        /// nadie pueda borrar la cuenta de otra persona.
-        /// </summary>
+     
         [HttpDelete]
         public async Task<IActionResult> EliminarCuenta()
         {

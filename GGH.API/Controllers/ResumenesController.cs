@@ -9,13 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GGH.API.Controllers
 {
-    /// <summary>
-    /// Resúmenes sobre los propios gastos/ingresos del usuario autenticado,
-    /// sin considerar grupo familiar (equivalente individual de
-    /// GruposFamiliaresController). Útil tanto para usuarios que no
-    /// pertenecen a ningún grupo como para que un miembro de un grupo
-    /// vea "solo lo mío".
-    /// </summary>
+   
     [ApiController]
     [Authorize]
     [Route("api/resumenes")]
