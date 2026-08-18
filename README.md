@@ -2,8 +2,6 @@
 
 Backend de la aplicación de gestión de gastos e ingresos familiares. Expone una API REST construida con .NET, siguiendo Clean Architecture y CQRS, con toda la lógica de negocio implementada en funciones de PostgreSQL.
 
-> El frontend (React) vive en un repositorio separado: [ggh.app](#) *(agrega aquí el link a tu otro repo cuando lo subas)*
-
 ## Características
 
 - Autenticación por RUT chileno + contraseña, JWT con renovación de sesión
